@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
+options: "2245e48211b46a9507ff3d043ff4a12f"
+build_time: [1534168785, 845069000]
+inputs:
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/SignInViewController.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/EntryDataLogTableViewController.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/DataLogTableViewCell.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/DataLogViewController.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/DataLogTableViewController.swift": [9223372036, 854775807]
+  "/Users/fionaomahoney/projects/BudgetSheet/BudgetSheet/EntryViewController.swift": [9223372036, 854775807]

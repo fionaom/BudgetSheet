@@ -1,0 +1,403 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DataLogViewController"
+provides-nominal:
+- "11BudgetSheet21DataLogViewControllerC"
+provides-member:
+- ["11BudgetSheet21DataLogViewControllerC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "signOut"
+- "viewDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "DataLogViewController"
+- !private "GIDSignIn"
+- !private "StringLiteralType"
+- !private "UIBarButtonItem"
+- "UIViewController"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "GIDSignIn"]
+- !private ["s7CVarArgP", "UIBarButtonItem"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "navigationController"]
+- !private ["s7CVarArgP", "navigationItem"]
+- !private ["s7CVarArgP", "popToRootViewController"]
+- !private ["s7CVarArgP", "rightBarButtonItem"]
+- !private ["s7CVarArgP", "sharedInstance"]
+- !private ["s7CVarArgP", "signOut"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "GIDSignIn"]
+- !private ["s28CustomDebugStringConvertibleP", "UIBarButtonItem"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationController"]
+- !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
+- !private ["s28CustomDebugStringConvertibleP", "popToRootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "rightBarButtonItem"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedInstance"]
+- !private ["s28CustomDebugStringConvertibleP", "signOut"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "GIDSignIn"]
+- !private ["s23CustomStringConvertibleP", "UIBarButtonItem"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "navigationController"]
+- !private ["s23CustomStringConvertibleP", "navigationItem"]
+- !private ["s23CustomStringConvertibleP", "popToRootViewController"]
+- !private ["s23CustomStringConvertibleP", "rightBarButtonItem"]
+- !private ["s23CustomStringConvertibleP", "sharedInstance"]
+- !private ["s23CustomStringConvertibleP", "signOut"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["11BudgetSheet21DataLogViewControllerC", "GIDSignIn"]
+- !private ["11BudgetSheet21DataLogViewControllerC", "UIBarButtonItem"]
+- ["11BudgetSheet21DataLogViewControllerC", "deinit"]
+- ["11BudgetSheet21DataLogViewControllerC", "didReceiveMemoryWarning"]
+- ["11BudgetSheet21DataLogViewControllerC", "init"]
+- !private ["11BudgetSheet21DataLogViewControllerC", "navigationController"]
+- !private ["11BudgetSheet21DataLogViewControllerC", "navigationItem"]
+- ["11BudgetSheet21DataLogViewControllerC", "signOut"]
+- ["11BudgetSheet21DataLogViewControllerC", "viewDidLoad"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "GIDSignIn"]
+- !private ["s9EquatableP", "UIBarButtonItem"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "navigationController"]
+- !private ["s9EquatableP", "navigationItem"]
+- !private ["s9EquatableP", "plain"]
+- !private ["s9EquatableP", "popToRootViewController"]
+- !private ["s9EquatableP", "rightBarButtonItem"]
+- !private ["s9EquatableP", "sharedInstance"]
+- !private ["s9EquatableP", "signOut"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s9EquatableP", ""]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So9GIDSignInC", "sharedInstance"]
+- !private ["So9GIDSignInC", "signOut"]
+- !private ["s8HashableP", "GIDSignIn"]
+- !private ["s8HashableP", "UIBarButtonItem"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "navigationController"]
+- !private ["s8HashableP", "navigationItem"]
+- !private ["s8HashableP", "plain"]
+- !private ["s8HashableP", "popToRootViewController"]
+- !private ["s8HashableP", "rightBarButtonItem"]
+- !private ["s8HashableP", "sharedInstance"]
+- !private ["s8HashableP", "signOut"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "GIDSignIn"]
+- !private ["So8NSCodingP", "UIBarButtonItem"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "navigationController"]
+- !private ["So8NSCodingP", "navigationItem"]
+- !private ["So8NSCodingP", "popToRootViewController"]
+- !private ["So8NSCodingP", "rightBarButtonItem"]
+- !private ["So8NSCodingP", "signOut"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "GIDSignIn"]
+- !private ["So26NSExtensionRequestHandlingP", "UIBarButtonItem"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationController"]
+- !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
+- !private ["So26NSExtensionRequestHandlingP", "popToRootViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "signOut"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "GIDSignIn"]
+- !private ["So8NSObjectC", "UIBarButtonItem"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "navigationController"]
+- !private ["So8NSObjectC", "navigationItem"]
+- !private ["So8NSObjectC", "popToRootViewController"]
+- !private ["So8NSObjectC", "rightBarButtonItem"]
+- !private ["So8NSObjectC", "sharedInstance"]
+- ["So8NSObjectC", "signOut"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "GIDSignIn"]
+- !private ["So16NSObjectProtocolP", "UIBarButtonItem"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "navigationController"]
+- !private ["So16NSObjectProtocolP", "navigationItem"]
+- !private ["So16NSObjectProtocolP", "popToRootViewController"]
+- !private ["So16NSObjectProtocolP", "rightBarButtonItem"]
+- !private ["So16NSObjectProtocolP", "sharedInstance"]
+- !private ["So16NSObjectProtocolP", "signOut"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s16RawRepresentableP", "plain"]
+- !private ["s8SequenceP", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So21UIAppearanceContainerP", "GIDSignIn"]
+- !private ["So21UIAppearanceContainerP", "UIBarButtonItem"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "navigationController"]
+- !private ["So21UIAppearanceContainerP", "navigationItem"]
+- !private ["So21UIAppearanceContainerP", "popToRootViewController"]
+- !private ["So21UIAppearanceContainerP", "signOut"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So15UIBarButtonItemC", "init"]
+- !private ["SC20UIBarButtonItemStyleO", "plain"]
+- !private ["So9UIBarItemC", "init"]
+- !private ["So18UIContentContainerP", "GIDSignIn"]
+- !private ["So18UIContentContainerP", "UIBarButtonItem"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "navigationController"]
+- !private ["So18UIContentContainerP", "navigationItem"]
+- !private ["So18UIContentContainerP", "popToRootViewController"]
+- !private ["So18UIContentContainerP", "signOut"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIFocusEnvironmentP", "GIDSignIn"]
+- !private ["So18UIFocusEnvironmentP", "UIBarButtonItem"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "navigationController"]
+- !private ["So18UIFocusEnvironmentP", "navigationItem"]
+- !private ["So18UIFocusEnvironmentP", "popToRootViewController"]
+- !private ["So18UIFocusEnvironmentP", "signOut"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So22UINavigationControllerC", "popToRootViewController"]
+- !private ["So16UINavigationItemC", "rightBarButtonItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "GIDSignIn"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIBarButtonItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
+- !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "popToRootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "signOut"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So11UIResponderC", "GIDSignIn"]
+- !private ["So11UIResponderC", "UIBarButtonItem"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "navigationController"]
+- !private ["So11UIResponderC", "navigationItem"]
+- !private ["So11UIResponderC", "popToRootViewController"]
+- ["So11UIResponderC", "signOut"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "GIDSignIn"]
+- !private ["So30UIResponderStandardEditActionsP", "UIBarButtonItem"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationController"]
+- !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
+- !private ["So30UIResponderStandardEditActionsP", "popToRootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "signOut"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So16UIStateRestoringP", "GIDSignIn"]
+- !private ["So16UIStateRestoringP", "UIBarButtonItem"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "navigationController"]
+- !private ["So16UIStateRestoringP", "navigationItem"]
+- !private ["So16UIStateRestoringP", "popToRootViewController"]
+- !private ["So16UIStateRestoringP", "signOut"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So18UITraitEnvironmentP", "GIDSignIn"]
+- !private ["So18UITraitEnvironmentP", "UIBarButtonItem"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "navigationController"]
+- !private ["So18UITraitEnvironmentP", "navigationItem"]
+- !private ["So18UITraitEnvironmentP", "popToRootViewController"]
+- !private ["So18UITraitEnvironmentP", "signOut"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So16UIViewControllerC", "GIDSignIn"]
+- !private ["So16UIViewControllerC", "UIBarButtonItem"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "navigationController"]
+- !private ["So16UIViewControllerC", "navigationItem"]
+- !private ["So16UIViewControllerC", "popToRootViewController"]
+- ["So16UIViewControllerC", "signOut"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", ""]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GIDSignIn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBarButtonItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "popToRootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rightBarButtonItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedInstance"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "signOut"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "11BudgetSheet21DataLogViewControllerC"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So9GIDSignInC"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- !private "So15UIBarButtonItemC"
+- !private "SC20UIBarButtonItemStyleO"
+- !private "So9UIBarItemC"
+- "So18UIContentContainerP"
+- "So18UIFocusEnvironmentP"
+- !private "So22UINavigationControllerC"
+- !private "So16UINavigationItemC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So16UIViewControllerC"
+- !private "s23_BidirectionalIndexableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBase64.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GoogleAPIClientForREST-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDProfileData.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDateTime.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRURITemplate.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherLogging.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRFramework.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMGatherInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMReadMonitorInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GoogleSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDAuthentication.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDuration.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRRuntimeCommon.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignInButton.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionUploadFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDGoogleUser.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUtilities.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDefines.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUploadParameters.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsObjects.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheets.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRErrorObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchResult.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMMIMEDocument.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules/module.modulemap"
+interface-hash: "b3142f0e6deff0e11df7a252a46d9d7b"

@@ -1,0 +1,578 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "EntryDataLogTableViewController"
+provides-nominal:
+- "11BudgetSheet31EntryDataLogTableViewControllerC"
+provides-member:
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", ""]
+provides-dynamic-lookup:
+- "amount"
+- "category"
+- "date"
+- "didReceiveMemoryWarning"
+- "enteredBy"
+- "location"
+- "method"
+- "note"
+- "numberOfSections"
+- "spender"
+- "subcategory"
+- "tableView"
+- "viewDidLoad"
+- "viewWillAppear"
+depends-top-level:
+- "AssignmentPrecedence"
+- "Bool"
+- "CastingPrecedence"
+- "EntryDataLogTableViewController"
+- "Int"
+- !private "String"
+- !private "StringLiteralType"
+- "UITableView"
+- "UITableViewController"
+- "UITextField"
+- "UITextView"
+- !private "UIView"
+- !private "UserDefaults"
+depends-member:
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "tableFooterView"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["s7CVarArgP", "UIView"]
+- !private ["s7CVarArgP", "UserDefaults"]
+- !private ["s7CVarArgP", "dictionary"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "enteredBy"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "standard"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "tableFooterView"]
+- !private ["s7CVarArgP", "tableView"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "UIView"]
+- !private ["s28CustomDebugStringConvertibleP", "UserDefaults"]
+- !private ["s28CustomDebugStringConvertibleP", "dictionary"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "enteredBy"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "tableFooterView"]
+- !private ["s28CustomDebugStringConvertibleP", "tableView"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "UIView"]
+- !private ["s23CustomStringConvertibleP", "UserDefaults"]
+- !private ["s23CustomStringConvertibleP", "dictionary"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "enteredBy"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "standard"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "tableFooterView"]
+- !private ["s23CustomStringConvertibleP", "tableView"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "Bool"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "Int"]
+- !private ["11BudgetSheet31EntryDataLogTableViewControllerC", "String"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "UITableView"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "UITextField"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "UITextView"]
+- !private ["11BudgetSheet31EntryDataLogTableViewControllerC", "UIView"]
+- !private ["11BudgetSheet31EntryDataLogTableViewControllerC", "UserDefaults"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "amount"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "category"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "date"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "deinit"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "didReceiveMemoryWarning"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "enteredBy"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "init"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "location"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "method"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "note"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "numberOfSections"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "spender"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "subcategory"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "tableView"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "viewDidLoad"]
+- ["11BudgetSheet31EntryDataLogTableViewControllerC", "viewWillAppear"]
+- !private ["s9EquatableP", "UIView"]
+- !private ["s9EquatableP", "UserDefaults"]
+- !private ["s9EquatableP", "dictionary"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "enteredBy"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "standard"]
+- !private ["s9EquatableP", "tableFooterView"]
+- !private ["s9EquatableP", "tableView"]
+- !private ["s9EquatableP", "text"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s9EquatableP", ""]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "UIView"]
+- !private ["s8HashableP", "UserDefaults"]
+- !private ["s8HashableP", "dictionary"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "enteredBy"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "standard"]
+- !private ["s8HashableP", "tableFooterView"]
+- !private ["s8HashableP", "tableView"]
+- !private ["s8HashableP", "text"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "UIView"]
+- !private ["So8NSCodingP", "UserDefaults"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "enteredBy"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "tableFooterView"]
+- !private ["So8NSCodingP", "tableView"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "UIView"]
+- !private ["So26NSExtensionRequestHandlingP", "UserDefaults"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "enteredBy"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "tableView"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UITableView"]
+- ["So8NSObjectC", "UITextField"]
+- ["So8NSObjectC", "UITextView"]
+- !private ["So8NSObjectC", "UIView"]
+- !private ["So8NSObjectC", "UserDefaults"]
+- ["So8NSObjectC", "amount"]
+- ["So8NSObjectC", "category"]
+- ["So8NSObjectC", "date"]
+- !private ["So8NSObjectC", "dictionary"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "enteredBy"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "location"]
+- ["So8NSObjectC", "method"]
+- ["So8NSObjectC", "note"]
+- ["So8NSObjectC", "numberOfSections"]
+- ["So8NSObjectC", "spender"]
+- !private ["So8NSObjectC", "standard"]
+- ["So8NSObjectC", "subcategory"]
+- !private ["So8NSObjectC", "tableFooterView"]
+- ["So8NSObjectC", "tableView"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "viewDidLoad"]
+- ["So8NSObjectC", "viewWillAppear"]
+- !private ["So16NSObjectProtocolP", "UIView"]
+- !private ["So16NSObjectProtocolP", "UserDefaults"]
+- !private ["So16NSObjectProtocolP", "dictionary"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "enteredBy"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "standard"]
+- !private ["So16NSObjectProtocolP", "tableFooterView"]
+- !private ["So16NSObjectProtocolP", "tableView"]
+- !private ["So16NSObjectProtocolP", "text"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "tableFooterView"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "tableFooterView"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "UIView"]
+- !private ["So21UIAppearanceContainerP", "UserDefaults"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "enteredBy"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "tableFooterView"]
+- !private ["So21UIAppearanceContainerP", "tableView"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So18UIContentContainerP", "UIView"]
+- !private ["So18UIContentContainerP", "UserDefaults"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "enteredBy"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "tableView"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "tableFooterView"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So23UIDataSourceTranslatingP", "tableFooterView"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "tableFooterView"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "UIView"]
+- !private ["So18UIFocusEnvironmentP", "UserDefaults"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "enteredBy"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "tableFooterView"]
+- !private ["So18UIFocusEnvironmentP", "tableView"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "tableFooterView"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIView"]
+- !private ["So30UIPasteConfigurationSupportingP", "UserDefaults"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "enteredBy"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "tableFooterView"]
+- !private ["So30UIPasteConfigurationSupportingP", "tableView"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "Int"]
+- !private ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UITableView"]
+- ["So11UIResponderC", "UITextField"]
+- ["So11UIResponderC", "UITextView"]
+- !private ["So11UIResponderC", "UIView"]
+- !private ["So11UIResponderC", "UserDefaults"]
+- ["So11UIResponderC", "amount"]
+- ["So11UIResponderC", "category"]
+- ["So11UIResponderC", "date"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "enteredBy"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "location"]
+- ["So11UIResponderC", "method"]
+- ["So11UIResponderC", "note"]
+- ["So11UIResponderC", "numberOfSections"]
+- ["So11UIResponderC", "spender"]
+- ["So11UIResponderC", "subcategory"]
+- !private ["So11UIResponderC", "tableFooterView"]
+- ["So11UIResponderC", "tableView"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "viewDidLoad"]
+- ["So11UIResponderC", "viewWillAppear"]
+- !private ["So30UIResponderStandardEditActionsP", "UIView"]
+- !private ["So30UIResponderStandardEditActionsP", "UserDefaults"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "enteredBy"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "tableFooterView"]
+- !private ["So30UIResponderStandardEditActionsP", "tableView"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So12UIScrollViewC", "tableFooterView"]
+- !private ["So20UIScrollViewDelegateP", "UIView"]
+- !private ["So20UIScrollViewDelegateP", "UserDefaults"]
+- !private ["So20UIScrollViewDelegateP", "didReceiveMemoryWarning"]
+- !private ["So20UIScrollViewDelegateP", "enteredBy"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So20UIScrollViewDelegateP", "tableView"]
+- !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
+- ["So20UIScrollViewDelegateP", ""]
+- !private ["So35UISpringLoadedInteractionSupportingP", "tableFooterView"]
+- !private ["So16UIStateRestoringP", "UIView"]
+- !private ["So16UIStateRestoringP", "UserDefaults"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "enteredBy"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "tableView"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So11UITableViewC", "tableFooterView"]
+- ["So21UITableViewControllerC", "Bool"]
+- ["So21UITableViewControllerC", "Int"]
+- !private ["So21UITableViewControllerC", "String"]
+- ["So21UITableViewControllerC", "UITableView"]
+- ["So21UITableViewControllerC", "UITextField"]
+- ["So21UITableViewControllerC", "UITextView"]
+- !private ["So21UITableViewControllerC", "UIView"]
+- !private ["So21UITableViewControllerC", "UserDefaults"]
+- ["So21UITableViewControllerC", "amount"]
+- ["So21UITableViewControllerC", "category"]
+- ["So21UITableViewControllerC", "date"]
+- ["So21UITableViewControllerC", "didReceiveMemoryWarning"]
+- ["So21UITableViewControllerC", "enteredBy"]
+- ["So21UITableViewControllerC", "init"]
+- ["So21UITableViewControllerC", "location"]
+- ["So21UITableViewControllerC", "method"]
+- ["So21UITableViewControllerC", "note"]
+- ["So21UITableViewControllerC", "numberOfSections"]
+- ["So21UITableViewControllerC", "spender"]
+- ["So21UITableViewControllerC", "subcategory"]
+- ["So21UITableViewControllerC", "tableView"]
+- ["So21UITableViewControllerC", "viewDidLoad"]
+- ["So21UITableViewControllerC", "viewWillAppear"]
+- ["So21UITableViewControllerC", ""]
+- !private ["So21UITableViewDataSourceP", "UIView"]
+- !private ["So21UITableViewDataSourceP", "UserDefaults"]
+- !private ["So21UITableViewDataSourceP", "didReceiveMemoryWarning"]
+- !private ["So21UITableViewDataSourceP", "enteredBy"]
+- !private ["So21UITableViewDataSourceP", "init"]
+- !private ["So21UITableViewDataSourceP", "tableView"]
+- !private ["So21UITableViewDataSourceP", "viewDidLoad"]
+- ["So21UITableViewDataSourceP", ""]
+- !private ["So19UITableViewDelegateP", "UIView"]
+- !private ["So19UITableViewDelegateP", "UserDefaults"]
+- !private ["So19UITableViewDelegateP", "didReceiveMemoryWarning"]
+- !private ["So19UITableViewDelegateP", "enteredBy"]
+- !private ["So19UITableViewDelegateP", "init"]
+- !private ["So19UITableViewDelegateP", "tableView"]
+- !private ["So19UITableViewDelegateP", "viewDidLoad"]
+- ["So19UITableViewDelegateP", ""]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "UIView"]
+- !private ["So18UITraitEnvironmentP", "UserDefaults"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "enteredBy"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "tableFooterView"]
+- !private ["So18UITraitEnvironmentP", "tableView"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "tableFooterView"]
+- !private ["So6UIViewC", "text"]
+- ["So16UIViewControllerC", "Bool"]
+- ["So16UIViewControllerC", "Int"]
+- !private ["So16UIViewControllerC", "String"]
+- ["So16UIViewControllerC", "UITableView"]
+- ["So16UIViewControllerC", "UITextField"]
+- ["So16UIViewControllerC", "UITextView"]
+- !private ["So16UIViewControllerC", "UIView"]
+- !private ["So16UIViewControllerC", "UserDefaults"]
+- ["So16UIViewControllerC", "amount"]
+- ["So16UIViewControllerC", "category"]
+- ["So16UIViewControllerC", "date"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "enteredBy"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "location"]
+- ["So16UIViewControllerC", "method"]
+- ["So16UIViewControllerC", "note"]
+- ["So16UIViewControllerC", "numberOfSections"]
+- ["So16UIViewControllerC", "spender"]
+- ["So16UIViewControllerC", "subcategory"]
+- ["So16UIViewControllerC", "tableView"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", "viewWillAppear"]
+- !private ["So12UserDefaultsC", "dictionary"]
+- !private ["So12UserDefaultsC", "standard"]
+- !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "tableFooterView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserDefaults"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dictionary"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "enteredBy"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "standard"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tableFooterView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s10DictionaryV"
+- !private "s9EncodableP"
+- "11BudgetSheet31EntryDataLogTableViewControllerC"
+- "s9EquatableP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So23UIDataSourceTranslatingP"
+- !private "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So10UIKeyInputP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So12UIScrollViewC"
+- "So20UIScrollViewDelegateP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- "So16UIStateRestoringP"
+- !private "So11UITableViewC"
+- "So21UITableViewControllerC"
+- "So21UITableViewDataSourceP"
+- "So19UITableViewDelegateP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "So12UserDefaultsC"
+- !private "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBase64.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GoogleAPIClientForREST-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDProfileData.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDateTime.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRURITemplate.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherLogging.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRFramework.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMGatherInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMReadMonitorInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GoogleSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDAuthentication.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDuration.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRRuntimeCommon.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignInButton.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionUploadFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDGoogleUser.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUtilities.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDefines.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUploadParameters.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsObjects.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheets.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRErrorObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchResult.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMMIMEDocument.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules/module.modulemap"
+interface-hash: "ceae8f3b17ac51b6521dc2b320e4fe93"

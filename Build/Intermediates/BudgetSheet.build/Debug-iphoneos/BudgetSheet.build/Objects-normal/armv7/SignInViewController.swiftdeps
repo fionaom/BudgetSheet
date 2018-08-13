@@ -1,0 +1,274 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SignInViewController"
+provides-nominal:
+- "11BudgetSheet20SignInViewControllerC"
+provides-member:
+- ["11BudgetSheet20SignInViewControllerC", ""]
+provides-dynamic-lookup:
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "GIDSignIn"
+- "GIDSignInUIDelegate"
+- "SignInViewController"
+- "UIViewController"
+depends-member:
+- !private ["s7CVarArgP", "GIDSignIn"]
+- !private ["s7CVarArgP", "didReceiveMemoryWarning"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "sharedInstance"]
+- ["s7CVarArgP", "sign"]
+- ["s7CVarArgP", "signIn"]
+- ["s7CVarArgP", "signInWillDispatch"]
+- !private ["s7CVarArgP", "uiDelegate"]
+- !private ["s7CVarArgP", "viewDidLoad"]
+- ["s7CVarArgP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "GIDSignIn"]
+- !private ["s28CustomDebugStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "sharedInstance"]
+- ["s28CustomDebugStringConvertibleP", "sign"]
+- ["s28CustomDebugStringConvertibleP", "signIn"]
+- ["s28CustomDebugStringConvertibleP", "signInWillDispatch"]
+- !private ["s28CustomDebugStringConvertibleP", "uiDelegate"]
+- !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "GIDSignIn"]
+- !private ["s23CustomStringConvertibleP", "didReceiveMemoryWarning"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "sharedInstance"]
+- ["s23CustomStringConvertibleP", "sign"]
+- ["s23CustomStringConvertibleP", "signIn"]
+- ["s23CustomStringConvertibleP", "signInWillDispatch"]
+- !private ["s23CustomStringConvertibleP", "uiDelegate"]
+- !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9EquatableP", "GIDSignIn"]
+- !private ["s9EquatableP", "didReceiveMemoryWarning"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "sharedInstance"]
+- ["s9EquatableP", "sign"]
+- ["s9EquatableP", "signIn"]
+- ["s9EquatableP", "signInWillDispatch"]
+- !private ["s9EquatableP", "uiDelegate"]
+- !private ["s9EquatableP", "viewDidLoad"]
+- ["s9EquatableP", ""]
+- !private ["So9GIDSignInC", "sharedInstance"]
+- !private ["So9GIDSignInC", "uiDelegate"]
+- !private ["So19GIDSignInUIDelegateP", "GIDSignIn"]
+- ["So19GIDSignInUIDelegateP", "sign"]
+- ["So19GIDSignInUIDelegateP", "signIn"]
+- ["So19GIDSignInUIDelegateP", "signInWillDispatch"]
+- ["So19GIDSignInUIDelegateP", ""]
+- !private ["s8HashableP", "GIDSignIn"]
+- !private ["s8HashableP", "didReceiveMemoryWarning"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "sharedInstance"]
+- ["s8HashableP", "sign"]
+- ["s8HashableP", "signIn"]
+- ["s8HashableP", "signInWillDispatch"]
+- !private ["s8HashableP", "uiDelegate"]
+- !private ["s8HashableP", "viewDidLoad"]
+- ["s8HashableP", ""]
+- !private ["So8NSCodingP", "GIDSignIn"]
+- !private ["So8NSCodingP", "didReceiveMemoryWarning"]
+- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "sign"]
+- ["So8NSCodingP", "signIn"]
+- ["So8NSCodingP", "signInWillDispatch"]
+- !private ["So8NSCodingP", "viewDidLoad"]
+- ["So8NSCodingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "GIDSignIn"]
+- !private ["So26NSExtensionRequestHandlingP", "didReceiveMemoryWarning"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- ["So26NSExtensionRequestHandlingP", "sign"]
+- ["So26NSExtensionRequestHandlingP", "signIn"]
+- ["So26NSExtensionRequestHandlingP", "signInWillDispatch"]
+- !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
+- ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So8NSObjectC", "GIDSignIn"]
+- ["So8NSObjectC", "didReceiveMemoryWarning"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "sharedInstance"]
+- ["So8NSObjectC", "sign"]
+- ["So8NSObjectC", "signIn"]
+- ["So8NSObjectC", "signInWillDispatch"]
+- !private ["So8NSObjectC", "uiDelegate"]
+- ["So8NSObjectC", "viewDidLoad"]
+- !private ["So16NSObjectProtocolP", "GIDSignIn"]
+- !private ["So16NSObjectProtocolP", "didReceiveMemoryWarning"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "sharedInstance"]
+- ["So16NSObjectProtocolP", "sign"]
+- ["So16NSObjectProtocolP", "signIn"]
+- ["So16NSObjectProtocolP", "signInWillDispatch"]
+- !private ["So16NSObjectProtocolP", "uiDelegate"]
+- !private ["So16NSObjectProtocolP", "viewDidLoad"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["11BudgetSheet20SignInViewControllerC", "GIDSignIn"]
+- ["11BudgetSheet20SignInViewControllerC", "deinit"]
+- ["11BudgetSheet20SignInViewControllerC", "didReceiveMemoryWarning"]
+- ["11BudgetSheet20SignInViewControllerC", "init"]
+- ["11BudgetSheet20SignInViewControllerC", "sign"]
+- ["11BudgetSheet20SignInViewControllerC", "signIn"]
+- ["11BudgetSheet20SignInViewControllerC", "signInWillDispatch"]
+- ["11BudgetSheet20SignInViewControllerC", "viewDidLoad"]
+- !private ["So21UIAppearanceContainerP", "GIDSignIn"]
+- !private ["So21UIAppearanceContainerP", "didReceiveMemoryWarning"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "sign"]
+- ["So21UIAppearanceContainerP", "signIn"]
+- ["So21UIAppearanceContainerP", "signInWillDispatch"]
+- !private ["So21UIAppearanceContainerP", "viewDidLoad"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So18UIContentContainerP", "GIDSignIn"]
+- !private ["So18UIContentContainerP", "didReceiveMemoryWarning"]
+- !private ["So18UIContentContainerP", "init"]
+- ["So18UIContentContainerP", "sign"]
+- ["So18UIContentContainerP", "signIn"]
+- ["So18UIContentContainerP", "signInWillDispatch"]
+- !private ["So18UIContentContainerP", "viewDidLoad"]
+- ["So18UIContentContainerP", ""]
+- !private ["So18UIFocusEnvironmentP", "GIDSignIn"]
+- !private ["So18UIFocusEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "sign"]
+- ["So18UIFocusEnvironmentP", "signIn"]
+- ["So18UIFocusEnvironmentP", "signInWillDispatch"]
+- !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "GIDSignIn"]
+- !private ["So30UIPasteConfigurationSupportingP", "didReceiveMemoryWarning"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "sign"]
+- ["So30UIPasteConfigurationSupportingP", "signIn"]
+- ["So30UIPasteConfigurationSupportingP", "signInWillDispatch"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So11UIResponderC", "GIDSignIn"]
+- ["So11UIResponderC", "didReceiveMemoryWarning"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "sign"]
+- ["So11UIResponderC", "signIn"]
+- ["So11UIResponderC", "signInWillDispatch"]
+- ["So11UIResponderC", "viewDidLoad"]
+- !private ["So30UIResponderStandardEditActionsP", "GIDSignIn"]
+- !private ["So30UIResponderStandardEditActionsP", "didReceiveMemoryWarning"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "sign"]
+- ["So30UIResponderStandardEditActionsP", "signIn"]
+- ["So30UIResponderStandardEditActionsP", "signInWillDispatch"]
+- !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So16UIStateRestoringP", "GIDSignIn"]
+- !private ["So16UIStateRestoringP", "didReceiveMemoryWarning"]
+- !private ["So16UIStateRestoringP", "init"]
+- ["So16UIStateRestoringP", "sign"]
+- ["So16UIStateRestoringP", "signIn"]
+- ["So16UIStateRestoringP", "signInWillDispatch"]
+- !private ["So16UIStateRestoringP", "viewDidLoad"]
+- ["So16UIStateRestoringP", ""]
+- !private ["So18UITraitEnvironmentP", "GIDSignIn"]
+- !private ["So18UITraitEnvironmentP", "didReceiveMemoryWarning"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "sign"]
+- ["So18UITraitEnvironmentP", "signIn"]
+- ["So18UITraitEnvironmentP", "signInWillDispatch"]
+- !private ["So18UITraitEnvironmentP", "viewDidLoad"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So16UIViewControllerC", "GIDSignIn"]
+- ["So16UIViewControllerC", "didReceiveMemoryWarning"]
+- ["So16UIViewControllerC", "init"]
+- ["So16UIViewControllerC", "sign"]
+- ["So16UIViewControllerC", "signIn"]
+- ["So16UIViewControllerC", "signInWillDispatch"]
+- ["So16UIViewControllerC", "viewDidLoad"]
+- ["So16UIViewControllerC", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GIDSignIn"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didReceiveMemoryWarning"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sharedInstance"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "sign"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "signIn"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "signInWillDispatch"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uiDelegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- !private "So9GIDSignInC"
+- "So19GIDSignInUIDelegateP"
+- "s8HashableP"
+- "So8NSCodingP"
+- "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "11BudgetSheet20SignInViewControllerC"
+- "So21UIAppearanceContainerP"
+- "So18UIContentContainerP"
+- "So18UIFocusEnvironmentP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So16UIStateRestoringP"
+- "So18UITraitEnvironmentP"
+- "So16UIViewControllerC"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBase64.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GoogleAPIClientForREST-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-umbrella.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDProfileData.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsService.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDateTime.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRURITemplate.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcherLogging.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRFramework.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMGatherInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMReadMonitorInputStream.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GoogleSignIn.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDAuthentication.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDuration.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRRuntimeCommon.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDSignInButton.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionUploadFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Headers/GIDGoogleUser.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUtilities.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRDefines.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRUploadParameters.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsObjects.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheets.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRErrorObject.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchResult.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMMIMEDocument.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRBatchQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Headers/GTLRSheetsQuery.h"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Modules/module.modulemap"
+- "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules/module.modulemap"
+interface-hash: "7624636707470acffa580b87e8938d23"
