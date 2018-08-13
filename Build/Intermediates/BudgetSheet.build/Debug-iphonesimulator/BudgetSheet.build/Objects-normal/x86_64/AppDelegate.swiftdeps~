@@ -222,6 +222,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - ["s23CustomStringConvertibleP", "window"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["11BudgetSheet21DataLogViewControllerC", "navigationItem"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "append"]
 - !private ["s9DecodableP", "init"]
@@ -526,7 +527,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
 - !private ["So11UIFocusItemP", "rootViewController"]
-- !private ["So22UINavigationControllerC", "navigationItem"]
 - !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So16UINavigationItemC", "hidesBackButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "GIDSignIn"]
@@ -719,6 +719,7 @@ depends-nominal:
 - !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "11BudgetSheet21DataLogViewControllerC"
 - !private "s9DecodableP"
 - !private "s10DictionaryV"
 - !private "s9EncodableP"

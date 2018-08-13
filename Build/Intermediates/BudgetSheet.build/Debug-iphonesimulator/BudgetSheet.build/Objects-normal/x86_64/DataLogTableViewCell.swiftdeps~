@@ -8,7 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 - "amount"
 - "awakeFromNib"
-- "imageView"
+- "debitImageView"
 - "setSelected"
 - "title"
 depends-top-level:
@@ -39,8 +39,8 @@ depends-member:
 - ["11BudgetSheet20DataLogTableViewCellC", "UILabel"]
 - ["11BudgetSheet20DataLogTableViewCellC", "amount"]
 - ["11BudgetSheet20DataLogTableViewCellC", "awakeFromNib"]
+- ["11BudgetSheet20DataLogTableViewCellC", "debitImageView"]
 - ["11BudgetSheet20DataLogTableViewCellC", "deinit"]
-- ["11BudgetSheet20DataLogTableViewCellC", "imageView"]
 - ["11BudgetSheet20DataLogTableViewCellC", "init"]
 - ["11BudgetSheet20DataLogTableViewCellC", "setSelected"]
 - ["11BudgetSheet20DataLogTableViewCellC", "title"]
@@ -61,7 +61,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "amount"]
 - ["So8NSObjectC", "awakeFromNib"]
-- ["So8NSObjectC", "imageView"]
+- ["So8NSObjectC", "debitImageView"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "setSelected"]
 - ["So8NSObjectC", "title"]
@@ -110,7 +110,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "amount"]
 - ["So11UIResponderC", "awakeFromNib"]
-- ["So11UIResponderC", "imageView"]
+- ["So11UIResponderC", "debitImageView"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "setSelected"]
 - ["So11UIResponderC", "title"]
@@ -123,7 +123,7 @@ depends-member:
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", "amount"]
 - ["So15UITableViewCellC", "awakeFromNib"]
-- ["So15UITableViewCellC", "imageView"]
+- ["So15UITableViewCellC", "debitImageView"]
 - ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "setSelected"]
 - ["So15UITableViewCellC", "title"]
@@ -137,7 +137,7 @@ depends-member:
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "amount"]
 - ["So6UIViewC", "awakeFromNib"]
-- ["So6UIViewC", "imageView"]
+- ["So6UIViewC", "debitImageView"]
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "setSelected"]
 - ["So6UIViewC", "title"]
@@ -228,4 +228,4 @@ depends-external:
 - "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Modules/module.modulemap"
 - "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Modules/module.modulemap"
 - "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules/module.modulemap"
-interface-hash: "348a9ef7312dfc40da9e1d04d203605b"
+interface-hash: "80d3723e42f2e57a3e2adc995afdfc35"

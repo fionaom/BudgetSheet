@@ -7,6 +7,7 @@ provides-member:
 - ["11BudgetSheet21DataLogViewControllerC", ""]
 provides-dynamic-lookup:
 - "didReceiveMemoryWarning"
+- "signOut"
 - "viewDidLoad"
 depends-top-level:
 - "AssignmentPrecedence"
@@ -399,4 +400,4 @@ depends-external:
 - "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphonesimulator/GoogleAPIClientForREST/GoogleAPIClientForREST.framework/Modules/module.modulemap"
 - "/Users/fionaomahoney/projects/BudgetSheet/Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework/Modules/module.modulemap"
 - "/Users/fionaomahoney/projects/BudgetSheet/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules/module.modulemap"
-interface-hash: "6e7492d615d2701b4cc702e5870357e3"
+interface-hash: "b3142f0e6deff0e11df7a252a46d9d7b"

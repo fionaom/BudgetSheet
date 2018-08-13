@@ -175,6 +175,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import GoogleSignIn;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -249,24 +250,33 @@ SWIFT_CLASS("_TtC11BudgetSheet21DataLogViewController")
 @end
 
 @class UITextField;
+@class UIDatePicker;
 @class UITextView;
+@class UIButton;
 
 SWIFT_CLASS("_TtC11BudgetSheet31EntryDataLogTableViewController")
 @interface EntryDataLogTableViewController : UITableViewController
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified enteredBy;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified spender;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified date;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified category;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified amount;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified subcategory;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified location;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified method;
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified note;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified spenderButton;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)datePickerChanged:(id _Nonnull)sender;
+- (void)adjustForKeyboardWithNotification:(NSNotification * _Nonnull)notification;
+- (IBAction)dateFieldClicked:(id _Nonnull)sender;
+- (IBAction)spenderClicked:(id _Nonnull)sender;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;

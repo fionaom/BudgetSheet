@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>72WNU7V4AY.com.fionaom.sheets.budget.BudgetSheet</string>
+	<string>952E4BSHQS.com.fionaom.sheets.budget.BudgetSheet</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>72WNU7V4AY.com.fionaom.sheets.budget.BudgetSheet</string>
+		<string>952E4BSHQS.com.fionaom.sheets.budget.BudgetSheet</string>
 	</array>
 </dict>
 </plist>
