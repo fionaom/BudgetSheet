@@ -47,11 +47,11 @@ class EntryViewController: UIViewController {
         let location = entryDataLogTableViewController?.location.text ?? ""
         let note = entryDataLogTableViewController?.note.text ?? ""
         valueRange.values = [
-            [enteredBy, spender, date, category, amount, subcategory, method, location, note]
+            [enteredBy, spender, date, category, subcategory, amount, method, location, note]
         ]
         
         let query = GTLRSheetsQuery_SpreadsheetsValuesAppend
-            .query(withObject: valueRange, spreadsheetId:DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.RANGE)
+            .query(withObject: valueRange, spreadsheetId:DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.DATALOG)
         query.valueInputOption = "USER_ENTERED"
         service.executeQuery(query,
                              delegate: self,

@@ -14,31 +14,62 @@ import GTMSessionFetcher
 class DataLogTableViewController: UITableViewController {
 
     static let SHEET_ID = "19loQJ9hQZMzR-z3PATC_w9RsL-0KpYyuplexSwpshyk"
-    static let RANGE = "DataLog!A:I"
+    static let DATALOG = "DataLog!A:I"
+    static let CATEGORIES = "Categories!A:B"
+    static let SUBCATEGORIES = "Subcategories!A:C"
 
     private let service = GTLRSheetsService()
     private var headers: [String] = []
     private var data: [Any] = []
+    
+    private var categories_headers: [String] = []
+    private var cateogories_data: [Any] = []
+    
+    private var subcategories_headers: [String] = []
+    private var subcategories_data: [Any] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        service.authorizer = GIDSignIn.sharedInstance().currentUser.authentication.fetcherAuthorizer()
+        
+        if let authorizer = service.authorizer,
+            let canAuth = authorizer.canAuthorize, canAuth {
+            // getCategories()
+            getSubcategories()
+            openSheet()
+        
+            // Scroll to bottom
+            tableView.setContentOffset(CGPoint(x: 0, y: CGFloat.greatestFiniteMagnitude), animated: true)
+        } else {
+            print("Unauthorized")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Remove extra lines
         tableView.tableFooterView = UIView()
-        
-        service.authorizer = GIDSignIn.sharedInstance().currentUser.authentication.fetcherAuthorizer()
+    }
     
-        if let authorizer = service.authorizer,
-            let canAuth = authorizer.canAuthorize, canAuth {
-            openSheet()
-        } else {
-            print("Unauthorized")
-        }
+    func getCategories() {
+        print("Getting sheet data...")
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.CATEGORIES)
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
+    }
+    
+    func getSubcategories() {
+        print("Getting sheet data...")
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.SUBCATEGORIES)
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
     func openSheet() {
         print("Getting sheet data...")
-        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.RANGE)
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.DATALOG)
         service.executeQuery(query,
                              delegate: self,
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
@@ -61,12 +92,33 @@ class DataLogTableViewController: UITableViewController {
             return
         }
         
-        // Store the headers
-        headers = rows[0] as! [String]
+        if (result.range?.hasPrefix("DataLog"))! {
+            // Store the headers
+            headers = rows[0] as! [String]
         
-        // Remove header row from data
-        data = rows
-        data.remove(at: 0)
+            // Remove header row from data
+            data = rows
+            data.remove(at: 0)
+        }
+        else if (result.range?.hasPrefix("Categories"))! {
+            // Store the headers
+            categories_headers = rows[0] as! [String]
+            
+            // Remove header row from data
+            cateogories_data = rows
+            cateogories_data.remove(at: 0)
+        }
+        else if (result.range?.hasPrefix("Subcategories"))! {
+            // Store the headers
+            subcategories_headers = rows[0] as! [String]
+            
+            // Remove header row from data
+            subcategories_data = rows
+            subcategories_data.remove(at: 0)
+            
+            print(subcategories_data)
+            UserDefaults.standard.set(subcategories_data, forKey: "subcategories")
+        }
         
         self.tableView.reloadData()
         
@@ -105,10 +157,25 @@ class DataLogTableViewController: UITableViewController {
        // print("Row Data Length: \(rowData.count)")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DataLogCell", for: indexPath) as! DataLogTableViewCell
+        
+        cell.amount.text = ""
         if (rowData.count > 5) {
             cell.amount.text = rowData[5] as? String
         }
+        
+        cell.debitImageView.image = nil
+        if (rowData.count > 6) {
+            if let method = rowData[6] as? String {
+                if(method.caseInsensitiveCompare("debit") == ComparisonResult.orderedSame) {
+                    cell.debitImageView.image = UIImage.init(named: "debit")
+                }
+                else {
+                    cell.debitImageView.image = UIImage.init(named: "cash")
+                }
+            }
+        }
      
+        cell.title.text = ""
         if (rowData.count > 7) {
             cell.title.text = rowData[7] as? String
         }

@@ -175,6 +175,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import GoogleSignIn;
 @import Foundation;
+@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -227,6 +228,7 @@ SWIFT_CLASS("_TtC11BudgetSheet20DataLogTableViewCell")
 
 SWIFT_CLASS("_TtC11BudgetSheet26DataLogTableViewController")
 @interface DataLogTableViewController : UITableViewController
+- (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)displayResultWithTicketWithTicket:(GTLRServiceTicket * _Nonnull)ticket finishedWithObject:(GTLRSheets_ValueRange * _Nonnull)result error:(NSError * _Nullable)error;
 - (void)didReceiveMemoryWarning;
@@ -249,24 +251,40 @@ SWIFT_CLASS("_TtC11BudgetSheet21DataLogViewController")
 @end
 
 @class UITextField;
+@class UIDatePicker;
 @class UITextView;
+@class UIButton;
+@class UIPickerView;
 
 SWIFT_CLASS("_TtC11BudgetSheet31EntryDataLogTableViewController")
-@interface EntryDataLogTableViewController : UITableViewController
+@interface EntryDataLogTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified enteredBy;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified spender;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified date;
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified category;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified amount;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified subcategory;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified location;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified method;
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified note;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified spenderButton;
+@property (nonatomic, weak) IBOutlet UIPickerView * _Null_unspecified subcategoriesPickerView;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)datePickerChanged:(id _Nonnull)sender;
+- (void)adjustForKeyboardWithNotification:(NSNotification * _Nonnull)notification;
+- (IBAction)dateFieldClicked:(id _Nonnull)sender;
+- (IBAction)spenderClicked:(id _Nonnull)sender;
+- (IBAction)subcategoryClicked:(id _Nonnull)sender;
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
