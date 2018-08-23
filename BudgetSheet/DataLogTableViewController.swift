@@ -11,32 +11,61 @@ import GoogleSignIn
 import GoogleAPIClientForREST.GTLRSheetsService
 import GTMSessionFetcher
 
-class DataLogTableViewController: UITableViewController {
+struct Category: Codable {
+    let id: String
+    let name: String
+    let subcategories: [Subcategory]
+}
 
+struct Subcategory: Codable {
+    let id: String
+    let name: String
+}
+
+struct PaymentMethod: Codable {
+    let id: String
+    let name: String
+}
+
+class DataLogTableViewController: UITableViewController {
+    
     static let SHEET_ID = "19loQJ9hQZMzR-z3PATC_w9RsL-0KpYyuplexSwpshyk"
     static let DATALOG = "DataLog!A:I"
     static let CATEGORIES = "Categories!A:B"
     static let SUBCATEGORIES = "Subcategories!A:C"
-
+    static let PAYMENT_METHODS = "PayMethods!A:B"
+    
     private let service = GTLRSheetsService()
     private var headers: [String] = []
-    private var data: [Any] = []
+    private var data: [[String]] = []
     
     private var categories_headers: [String] = []
-    private var cateogories_data: [Any] = []
+    private var categories_data: [[String]] = []
     
     private var subcategories_headers: [String] = []
-    private var subcategories_data: [Any] = []
+    private var subcategories_data: [[String]] = []
+    
+    private var payment_method_headers: [String] = []
+    private var payment_method_data: [[String]] = []
+    
+    private var categories: [String:Category] = [:]
+    private var payment_methods: [PaymentMethod] = []
     
     override func viewWillAppear(_ animated: Bool) {
+        
+         let loadingViewController = LoadingViewController.init(nibName:"LoadingViewController", bundle: nil)
+         loadingViewController.modalPresentationStyle = .overCurrentContext
+         navigationController!.present(loadingViewController, animated: false)
+        
         service.authorizer = GIDSignIn.sharedInstance().currentUser.authentication.fetcherAuthorizer()
         
         if let authorizer = service.authorizer,
             let canAuth = authorizer.canAuthorize, canAuth {
-            // getCategories()
+            getPaymentMethods()
+            getCategories()
             getSubcategories()
             openSheet()
-        
+            
             // Scroll to bottom
             tableView.setContentOffset(CGPoint(x: 0, y: CGFloat.greatestFiniteMagnitude), animated: true)
         } else {
@@ -52,7 +81,7 @@ class DataLogTableViewController: UITableViewController {
     }
     
     func getCategories() {
-        print("Getting sheet data...")
+        print("Getting categories sheet data...")
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.CATEGORIES)
         service.executeQuery(query,
                              delegate: self,
@@ -60,31 +89,67 @@ class DataLogTableViewController: UITableViewController {
     }
     
     func getSubcategories() {
-        print("Getting sheet data...")
+        print("Getting subcategories sheet data...")
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.SUBCATEGORIES)
         service.executeQuery(query,
                              delegate: self,
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
+    func getPaymentMethods() {
+        print("Getting payment methods sheet data...")
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.PAYMENT_METHODS)
+        service.executeQuery(query,
+                             delegate: self,
+                             didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
+    }
+    
     func openSheet() {
-        print("Getting sheet data...")
+        print("Getting data log sheet data...")
         let query = GTLRSheetsQuery_SpreadsheetsValuesGet.query(withSpreadsheetId: DataLogTableViewController.SHEET_ID, range:DataLogTableViewController.DATALOG)
         service.executeQuery(query,
                              delegate: self,
                              didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
+    func sortCategories() {
+        for category in categories_data {
+            if let categoryId = category[0] as String? {
+                var categorySubcategories: [Subcategory] = []
+                for subcategory in subcategories_data {
+                    if let subcategoryCategoryId = subcategory[2] as String?,
+                        subcategoryCategoryId == categoryId {
+                        //print("Adding \(subcategory[0]) to \(categoryId)")
+                        categorySubcategories.append(Subcategory(id: subcategory[0], name: subcategory[1]))
+                    }
+                }
+                categories[categoryId] = Category(id: categoryId, name: category[1], subcategories: categorySubcategories)
+            }
+        }
+        //print(categories)
+        UserDefaults.standard.set(codable: categories, forKey: "categories")
+    }
+    
+    func sortPaymentMethods() {
+        for paymentMethod in payment_method_data {
+            if let paymentMethodId = paymentMethod[0] as String?,
+               let paymentMethodName = paymentMethod[1] as String?{
+                payment_methods.append(PaymentMethod(id: paymentMethodId, name: paymentMethodName))
+            }
+        }
+        UserDefaults.standard.set(codable: payment_methods, forKey: "payment_methods")
+    }
+    
     @objc func displayResultWithTicket(ticket: GTLRServiceTicket,
-                                 finishedWithObject result: GTLRSheets_ValueRange,
-                                 error: Error?) {
+                                       finishedWithObject result: GTLRSheets_ValueRange,
+                                       error: Error?) {
         
         if let error = error {
             print("Error: " + error.localizedDescription)
             return
         }
         
-       // var majorsString = ""
+        // var majorsString = ""
         let rows = result.values!
         
         if rows.isEmpty {
@@ -92,45 +157,51 @@ class DataLogTableViewController: UITableViewController {
             return
         }
         
-        if (result.range?.hasPrefix("DataLog"))! {
-            // Store the headers
-            headers = rows[0] as! [String]
-        
-            // Remove header row from data
-            data = rows
-            data.remove(at: 0)
-        }
-        else if (result.range?.hasPrefix("Categories"))! {
+        if (result.range?.hasPrefix("Categories"))! {
             // Store the headers
             categories_headers = rows[0] as! [String]
             
             // Remove header row from data
-            cateogories_data = rows
-            cateogories_data.remove(at: 0)
+            categories_data = rows as! [[String]]
+            categories_data.remove(at: 0)
         }
         else if (result.range?.hasPrefix("Subcategories"))! {
             // Store the headers
             subcategories_headers = rows[0] as! [String]
             
             // Remove header row from data
-            subcategories_data = rows
+            subcategories_data = rows as! [[String]]
             subcategories_data.remove(at: 0)
+        }
+        else if (result.range?.hasPrefix("PayMethods"))! {
+            // Store the headers
+            payment_method_headers = rows[0] as! [String]
             
-            print(subcategories_data)
-            UserDefaults.standard.set(subcategories_data, forKey: "subcategories")
+            // Remove header row from data
+            payment_method_data = rows as! [[String]]
+            payment_method_data.remove(at: 0)
+            
+            sortPaymentMethods()
+        }
+        else if (result.range?.hasPrefix("DataLog"))! {
+            // Store the headers
+            headers = rows[0] as! [String]
+            
+            // Remove header row from data
+            data = rows as! [[String]]
+            data.remove(at: 0)
+            
+            tableView.reloadData()
+            
+            // Scroll to bottom so more recent is in view
+            tableView.scrollToRow(at: IndexPath.init(row: data.count - 1, section: 0), at: .none, animated: true)
+            
+            dismiss(animated: false)
         }
         
-        self.tableView.reloadData()
-        
-      /*  majorsString += "Name, Major:\n"
-        for row in rows {
-            let name = row[0]
-            let major = row[4]
-            
-            majorsString += "\(name), \(major)\n"
+        if (categories_data.count > 0 && subcategories_data.count > 0) {
+            sortCategories();
         }
-        
-        print(majorsString) */
     }
     
     override func didReceiveMemoryWarning() {
@@ -147,10 +218,10 @@ class DataLogTableViewController: UITableViewController {
         return data.count
     }
     
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = indexPath.row
-        let rowData = data[row] as! NSArray
+        let rowData = data[row]
         
        // print("Row: \(row)")
        // print("Row Data: \(rowData)")
@@ -160,73 +231,25 @@ class DataLogTableViewController: UITableViewController {
         
         cell.amount.text = ""
         if (rowData.count > 5) {
-            cell.amount.text = rowData[5] as? String
+            cell.amount.text = rowData[5]
         }
         
         cell.debitImageView.image = nil
         if (rowData.count > 6) {
-            if let method = rowData[6] as? String {
-                if(method.caseInsensitiveCompare("debit") == ComparisonResult.orderedSame) {
-                    cell.debitImageView.image = UIImage.init(named: "debit")
-                }
-                else {
-                    cell.debitImageView.image = UIImage.init(named: "cash")
-                }
+            let method = rowData[6]
+            if(method.caseInsensitiveCompare("debit") == ComparisonResult.orderedSame) {
+                cell.debitImageView.image = UIImage.init(named: "debit")
+            }
+            else {
+                cell.debitImageView.image = UIImage.init(named: "cash")
             }
         }
-     
+        
         cell.title.text = ""
         if (rowData.count > 7) {
-            cell.title.text = rowData[7] as? String
+            cell.title.text = rowData[7]
         }
         
         return cell
-     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    }
 }

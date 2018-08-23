@@ -34,6 +34,12 @@ class EntryViewController: UIViewController {
     
     // Assuming right now we only have 1 child
     @IBAction func handleSubmit(_ sender: Any) {
+        
+        // Show loading
+        let loadingViewController = LoadingViewController.init(nibName:"LoadingViewController", bundle: nil)
+        loadingViewController.modalPresentationStyle = .overCurrentContext
+        navigationController!.present(loadingViewController, animated: false)
+        
         let entryDataLogTableViewController = self.childViewControllers[0] as? EntryDataLogTableViewController
 
         let valueRange = GTLRSheets_ValueRange.init()
@@ -67,6 +73,7 @@ class EntryViewController: UIViewController {
             return
         }
         
+        navigationController!.dismiss(animated: true)
         let alertController = UIAlertController(title: "Success!", message: "Data successfully logged", preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in

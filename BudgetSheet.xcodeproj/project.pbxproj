@@ -10,6 +10,9 @@
 		0F61BBCD19C9F142F3AC5A67 /* Pods_BudgetSheetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A9985CD830F785561209D /* Pods_BudgetSheetUITests.framework */; };
 		6BE1C2B78840423017AFA0D6 /* Pods_BudgetSheetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95719D721231A255C9DA7008 /* Pods_BudgetSheetTests.framework */; };
 		A30A51E086BF8501261C5352 /* Pods_BudgetSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA27F361AB980F3C3A6D9B4 /* Pods_BudgetSheet.framework */; };
+		D486FFD6212ED60000D8DA66 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486FFD5212ED60000D8DA66 /* UserDefaults+Extensions.swift */; };
+		D486FFD9212EDA8B00D8DA66 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D486FFD7212EDA8B00D8DA66 /* LoadingViewController.swift */; };
+		D486FFDA212EDA8B00D8DA66 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D486FFD8212EDA8B00D8DA66 /* LoadingViewController.xib */; };
 		D4A26DB421218E9100A5FD04 /* DataLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A26DB321218E9100A5FD04 /* DataLogTableViewCell.swift */; };
 		D4A26DB621219EAC00A5FD04 /* EntryDataLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A26DB521219EAC00A5FD04 /* EntryDataLogTableViewController.swift */; };
 		D4A26DB82121A11900A5FD04 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A26DB72121A11900A5FD04 /* EntryViewController.swift */; };
@@ -49,6 +52,9 @@
 		BA28F7606DA9C038B14C78D7 /* Pods-BudgetSheet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetSheet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetSheet/Pods-BudgetSheet.debug.xcconfig"; sourceTree = "<group>"; };
 		C0F727786EF8A5BD7B3A1C0D /* Pods-BudgetSheetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetSheetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetSheetTests/Pods-BudgetSheetTests.release.xcconfig"; sourceTree = "<group>"; };
 		CEA27F361AB980F3C3A6D9B4 /* Pods_BudgetSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D486FFD5212ED60000D8DA66 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		D486FFD7212EDA8B00D8DA66 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		D486FFD8212EDA8B00D8DA66 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 		D4A26DB321218E9100A5FD04 /* DataLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogTableViewCell.swift; sourceTree = "<group>"; };
 		D4A26DB521219EAC00A5FD04 /* EntryDataLogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDataLogTableViewController.swift; sourceTree = "<group>"; };
 		D4A26DB72121A11900A5FD04 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -150,12 +156,15 @@
 			children = (
 				D4A26DC02121C47000A5FD04 /* BudgetSheet-Bridging-Header.h */,
 				D4A5F999211346FD0030686C /* AppDelegate.swift */,
+				D486FFD5212ED60000D8DA66 /* UserDefaults+Extensions.swift */,
 				D4A5F99B211346FD0030686C /* SignInViewController.swift */,
 				D4A26DBE2121C21B00A5FD04 /* DataLogViewController.swift */,
 				D4A66D8821138B4A0083CEA0 /* DataLogTableViewController.swift */,
 				D4A26DB321218E9100A5FD04 /* DataLogTableViewCell.swift */,
 				D4A26DB521219EAC00A5FD04 /* EntryDataLogTableViewController.swift */,
 				D4A26DB72121A11900A5FD04 /* EntryViewController.swift */,
+				D486FFD7212EDA8B00D8DA66 /* LoadingViewController.swift */,
+				D486FFD8212EDA8B00D8DA66 /* LoadingViewController.xib */,
 				D4A5F99D211346FD0030686C /* Main.storyboard */,
 				D4A5F9A0211346FD0030686C /* Assets.xcassets */,
 				D4A5F9A2211346FD0030686C /* LaunchScreen.storyboard */,
@@ -254,7 +263,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Fiona O'Mahoney";
 				TargetAttributes = {
 					D4A5F995211346FD0030686C = {
@@ -301,6 +310,7 @@
 				D4A5F9A4211346FD0030686C /* LaunchScreen.storyboard in Resources */,
 				D4A5F9A1211346FD0030686C /* Assets.xcassets in Resources */,
 				D4A5F99F211346FD0030686C /* Main.storyboard in Resources */,
+				D486FFDA212EDA8B00D8DA66 /* LoadingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,8 +475,10 @@
 			files = (
 				D4A5F99C211346FD0030686C /* SignInViewController.swift in Sources */,
 				D4A26DB621219EAC00A5FD04 /* EntryDataLogTableViewController.swift in Sources */,
+				D486FFD6212ED60000D8DA66 /* UserDefaults+Extensions.swift in Sources */,
 				D4A26DB421218E9100A5FD04 /* DataLogTableViewCell.swift in Sources */,
 				D4A5F99A211346FD0030686C /* AppDelegate.swift in Sources */,
+				D486FFD9212EDA8B00D8DA66 /* LoadingViewController.swift in Sources */,
 				D4A26DBF2121C21B00A5FD04 /* DataLogViewController.swift in Sources */,
 				D4A66D8921138B4A0083CEA0 /* DataLogTableViewController.swift in Sources */,
 				D4A26DB82121A11900A5FD04 /* EntryViewController.swift in Sources */,
@@ -538,6 +550,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -545,6 +558,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -595,6 +609,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -602,6 +617,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

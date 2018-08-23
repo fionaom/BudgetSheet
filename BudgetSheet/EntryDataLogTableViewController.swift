@@ -8,26 +8,36 @@
 
 import UIKit
 
-class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
 
+    enum PickerView :Int { // enum with type
+        case category = 1
+        case subcategory = 2
+    }
+    
     @IBOutlet weak var enteredBy: UITextField!
     @IBOutlet weak var spender: UITextField!
     @IBOutlet weak var date: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var category: UITextField!
+    @IBOutlet weak var categoriesPickerView: UIPickerView!
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var subcategory: UITextField!
+    @IBOutlet weak var subcategoriesPickerView: UIPickerView!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var method: UITextField!
+    @IBOutlet weak var paymentMethodsPickerView: UIPickerView!
     @IBOutlet weak var note: UITextView!
     @IBOutlet weak var spenderButton: UIButton!
-    @IBOutlet weak var subcategoriesPickerView: UIPickerView!
     
-    var hideDatePicker = true
-    var hideEnteredBy = true
-    var hideSubcategories = true
-    
-    private var subcategories_data: [Any] = []
+    private var currentNoteTextViewHeight:CGFloat = 37.0
+    private var hideDatePicker = true
+    private var hideEnteredBy = true
+    private var hideCategories = true
+    private var hideSubcategories = true
+    private var hidePaymentMethod = true
+    private var categories: [String:Category] = [:]
+    private var paymentMethods: [PaymentMethod] = []
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -35,6 +45,8 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideKeyboardWhenTappedAround()
         
         // Remove extra lines
         tableView.tableFooterView = UIView()
@@ -52,7 +64,9 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
         
         copyDatePickerDate()
         
-        setupSubcategories()
+        setupCategories()
+        
+        setupPaymentMethods()
         
         // Keyboard Adjustments
         let notificationCenter = NotificationCenter.default
@@ -73,7 +87,7 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return 13
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -82,18 +96,37 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
                 return 0
             }
             else {
-                return 120
+                return 150
             }
         }
-        else if (indexPath.row == 5) {
+        else if (indexPath.row == 4) {
+            if (hideCategories) {
+                return 0
+            }
+            else {
+                return 150
+            }
+        }
+        else if (indexPath.row == 6) {
             if (hideSubcategories) {
                 return 0
             }
             else {
-                return 120
+                return 150
             }
         }
-        else if (indexPath.row == 10 && hideEnteredBy) {
+        else if (indexPath.row == 8) {
+            if (hidePaymentMethod) {
+                return 0
+            }
+            else {
+                return 150
+            }
+        }
+        else if (indexPath.row == 10) {
+            return 23 + currentNoteTextViewHeight
+        }
+        else if (indexPath.row == 12 && hideEnteredBy) {
             return 0
         }
         return 60
@@ -103,7 +136,35 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
         copyDatePickerDate()
     }
     
-    func setupSubcategories() {
+    func setupCategories() {
+        self.categoriesPickerView.delegate = self
+        self.categoriesPickerView.dataSource = self
+
+        if let userDefaultCategories = UserDefaults.standard.codable([String: Category].self, forKey: "categories") {
+            self.categories = userDefaultCategories
+            
+            // Default to Category with Id: 1
+            if let firstCategory = self.categories["1"] as Category? {
+                for (index, categoryInArray) in Array(self.categories.values).enumerated() {
+                    if categoryInArray.id == "1" {
+                        categoriesPickerView.selectRow(index, inComponent: 0, animated: false)
+                        subcategoriesPickerView.selectRow(0, inComponent: 0, animated: false)
+                        subcategory.text = firstCategory.subcategories[0].name
+                    }
+                }
+                self.category.text = firstCategory.name
+            }
+        }
+    }
+    
+    func setupPaymentMethods() {
+        if let userDefaultPaymentMethods = UserDefaults.standard.codable([PaymentMethod].self, forKey: "payment_methods") {
+            self.paymentMethods = userDefaultPaymentMethods
+            self.method.text = self.paymentMethods[0].name
+        }
+    }
+    
+    /*func setupSubcategories() {
         self.subcategoriesPickerView.delegate = self
         self.subcategoriesPickerView.dataSource = self
         if let subcategories = UserDefaults.standard.array(forKey: "subcategories") {
@@ -112,11 +173,11 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
             let rowData = subcategories_data[0] as! NSArray
             self.subcategory.text = rowData[1] as? String
         }
-    }
+    } */
     
     func copyDatePickerDate() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "d-MMM-yyyy"
         let strDate = dateFormatter.string(from: self.datePicker.date)
         self.date.text = strDate
     }
@@ -154,6 +215,19 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     
     @IBAction func subcategoryClicked(_ sender: Any) {
         hideSubcategories = !hideSubcategories
+        hideCategories = true
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    @IBAction func categoryClicked(_ sender: Any) {
+        hideCategories = !hideCategories
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    @IBAction func paymentMethodClicked(_ sender: Any) {
+        hidePaymentMethod = !hidePaymentMethod
         tableView.beginUpdates()
         tableView.endUpdates()
     }
@@ -164,18 +238,80 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return subcategories_data.count
+        if (pickerView.tag == PickerView.category.rawValue) {
+             return categories.count
+        }
+        else if (pickerView.tag == PickerView.subcategory.rawValue) {
+            // Get the selected category and then the subcategory count
+            let selectedCategoryRow = categoriesPickerView.selectedRow(inComponent: 0)
+            let selectedCategory = Array(categories.values)[selectedCategoryRow]
+            let subcategories = selectedCategory.subcategories
+            return subcategories.count
+        }
+        else {
+            return paymentMethods.count
+        }
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let rowData = subcategories_data[row] as! NSArray
-        return rowData[1] as? String
+        if (pickerView.tag == PickerView.category.rawValue) {
+            let selectedCategory = Array(categories.values)[row] 
+            return selectedCategory.name
+        }
+        else if (pickerView.tag == PickerView.subcategory.rawValue) {
+            // Get the selected category and then the subcategory count
+            let selectedCategoryRow = categoriesPickerView.selectedRow(inComponent: 0)
+            let selectedCategory = Array(categories.values)[selectedCategoryRow]
+            let subcategories = selectedCategory.subcategories
+            return subcategories[row].name
+        }
+        else {
+            return paymentMethods[row].name
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let rowData = subcategories_data[row] as! NSArray
-        self.subcategory.text = rowData[1] as? String
+        if (pickerView.tag == PickerView.category.rawValue) {
+            let selectedCategory = Array(categories.values)[row]
+            category.text = selectedCategory.name
+            subcategoriesPickerView.reloadComponent(0)
+            subcategoriesPickerView.selectRow(0, inComponent: 0, animated: false)
+            subcategory.text = selectedCategory.subcategories[0].name
+        }
+        else if (pickerView.tag == PickerView.subcategory.rawValue) {
+            // Get the selected category and then the subcategory count
+            let selectedCategoryRow = categoriesPickerView.selectedRow(inComponent: 0)
+            let selectedCategory = Array(categories.values)[selectedCategoryRow]
+            let subcategories = selectedCategory.subcategories
+            self.subcategory.text = subcategories[row].name
+        }
+        else {
+            self.method.text = paymentMethods[row].name
+        }
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        let fixedWidth = note.frame.size.width
+        let newSize = note.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        note.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        if (newSize.height > currentNoteTextViewHeight) {
+            currentNoteTextViewHeight = newSize.height
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+        print(newSize.height)
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboardView))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboardView() {
+        view.endEditing(true)
+    }
 }
