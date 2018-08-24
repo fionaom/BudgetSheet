@@ -13,6 +13,7 @@ class DataLogTableViewCell: UITableViewCell {
     @IBOutlet weak var debitImageView: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

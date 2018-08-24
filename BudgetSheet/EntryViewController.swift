@@ -52,8 +52,11 @@ class EntryViewController: UIViewController {
         let method = entryDataLogTableViewController?.method.text ?? ""
         let location = entryDataLogTableViewController?.location.text ?? ""
         let note = entryDataLogTableViewController?.note.text ?? ""
+        let latitude = entryDataLogTableViewController?.currentLocation.latitude ?? ""
+        let longitude = entryDataLogTableViewController?.currentLocation.longitude ?? ""
+        
         valueRange.values = [
-            [enteredBy, spender, date, category, subcategory, amount, method, location, note]
+            [enteredBy, spender, date, category, subcategory, amount, method, location, note, "", "", "", latitude, longitude]
         ]
         
         let query = GTLRSheetsQuery_SpreadsheetsValuesAppend

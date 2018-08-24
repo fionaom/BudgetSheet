@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/DataLogTableViewController.swift"
-            timestampString = "556753488.2283241"
+            timestampString = "556806352.0832011"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "226"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/AppDelegate.swift"
-            timestampString = "555891809.1014791"
+            timestampString = "556806352.083274"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.228429"
+            timestampString = "556806352.083325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.22885"
+            timestampString = "556806352.083488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.22912"
+            timestampString = "556806352.083583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
             landmarkName = "spenderClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/DataLogTableViewController.swift"
-            timestampString = "556753488.229394"
+            timestampString = "556806352.083673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/DataLogTableViewController.swift"
-            timestampString = "556753488.229441"
+            timestampString = "556806352.083725"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "174"
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.229495"
+            timestampString = "556806352.083775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
             landmarkName = "spenderClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.229811"
+            timestampString = "556806352.083858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "pickerView(_:titleForRow:forComponent:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.230087"
+            timestampString = "556806352.08394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
             landmarkName = "textViewDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.230352"
+            timestampString = "556806352.084024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "spenderClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.230599"
+            timestampString = "556806352.0841039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "paymentMethodClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,12 +234,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
-            timestampString = "556753488.23083"
+            timestampString = "556806352.084201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
             landmarkName = "paymentMethodClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetSheet/EntryDataLogTableViewController.swift"
+            timestampString = "556806352.0842839"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "431"
+            endingLineNumber = "431"
+            landmarkName = "locationTextChanged(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

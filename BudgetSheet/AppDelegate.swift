@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeView") as? DataLogViewController {
             if let navigator = window?.rootViewController as? UINavigationController {
                 viewController.navigationItem.hidesBackButton = true
-                navigator.pushViewController(viewController, animated: true)
+                navigator.pushViewController(viewController, animated: false)
             }
         }
     }

@@ -229,6 +229,12 @@ class DataLogTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DataLogCell", for: indexPath) as! DataLogTableViewCell
         
+        cell.date.text = ""
+        if (rowData.count > 3) {
+            print(rowData[2])
+            cell.date.text = rowData[2]
+        }
+        
         cell.amount.text = ""
         if (rowData.count > 5) {
             cell.amount.text = rowData[5]
@@ -237,12 +243,7 @@ class DataLogTableViewController: UITableViewController {
         cell.debitImageView.image = nil
         if (rowData.count > 6) {
             let method = rowData[6]
-            if(method.caseInsensitiveCompare("debit") == ComparisonResult.orderedSame) {
-                cell.debitImageView.image = UIImage.init(named: "debit")
-            }
-            else {
-                cell.debitImageView.image = UIImage.init(named: "cash")
-            }
+            cell.debitImageView.image = UIImage.init(named:method.lowercased())
         }
         
         cell.title.text = ""

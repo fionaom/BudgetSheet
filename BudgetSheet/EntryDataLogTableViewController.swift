@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
-class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
+struct CurrentLocation {
+    var name: String?
+    var latitude: String?
+    var longitude: String?
+}
+
+class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
 
     enum PickerView :Int { // enum with type
         case category = 1
@@ -25,6 +33,7 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     @IBOutlet weak var subcategory: UITextField!
     @IBOutlet weak var subcategoriesPickerView: UIPickerView!
     @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var method: UITextField!
     @IBOutlet weak var paymentMethodsPickerView: UIPickerView!
     @IBOutlet weak var note: UITextView!
@@ -36,11 +45,19 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     private var hideCategories = true
     private var hideSubcategories = true
     private var hidePaymentMethod = true
+    private var hideMap = true
     private var categories: [String:Category] = [:]
     private var paymentMethods: [PaymentMethod] = []
+    public var currentLocation: CurrentLocation = CurrentLocation()
+    private var locationManager: CLLocationManager?
+    private var locationSearchTimer: Timer?
     
     override func viewWillAppear(_ animated: Bool) {
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        locationSearchTimer?.invalidate()
     }
     
     override func viewDidLoad() {
@@ -59,6 +76,8 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
             self.enteredBy.text = userName
             self.spender.text = userName
         }
+        
+        toggleLocationServices()
         
         amount.becomeFirstResponder()
         
@@ -80,6 +99,16 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func toggleLocationServices() {
+        if (locationManager == nil) {
+            locationManager = CLLocationManager()
+            locationManager!.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager!.delegate = self
+            locationManager!.requestWhenInUseAuthorization()
+            locationManager!.startUpdatingLocation()
+        }
+    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,7 +116,7 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 13
+        return 14
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -124,9 +153,17 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
             }
         }
         else if (indexPath.row == 10) {
+            if (hideMap) {
+                return 0
+            }
+            else {
+                return 200
+            }
+        }
+        else if (indexPath.row == 11) {
             return 23 + currentNoteTextViewHeight
         }
-        else if (indexPath.row == 12 && hideEnteredBy) {
+        else if (indexPath.row == 13 && hideEnteredBy) {
             return 0
         }
         return 60
@@ -216,20 +253,107 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
     @IBAction func subcategoryClicked(_ sender: Any) {
         hideSubcategories = !hideSubcategories
         hideCategories = true
+        hidePaymentMethod = true
         tableView.beginUpdates()
         tableView.endUpdates()
     }
     
     @IBAction func categoryClicked(_ sender: Any) {
         hideCategories = !hideCategories
+        hideSubcategories = true
+        hidePaymentMethod = true
         tableView.beginUpdates()
         tableView.endUpdates()
     }
     
     @IBAction func paymentMethodClicked(_ sender: Any) {
         hidePaymentMethod = !hidePaymentMethod
+        hideCategories = true
+        hideSubcategories = true
         tableView.beginUpdates()
         tableView.endUpdates()
+    }
+    
+    func toggleMap() {
+        if hideMap {
+            hideMap = false
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+        
+    @objc func search() {
+        // Search nearby
+        if !(location.text?.isEmpty ?? true) {
+            toggleMap()
+            
+            // Remove all annotations
+            let allAnnotations = self.mapView.annotations
+            self.mapView.removeAnnotations(allAnnotations)
+            
+            let request = MKLocalSearchRequest()
+            request.naturalLanguageQuery = self.location.text
+            let region = CLLocationCoordinate2D(latitude: (locationManager!.location?.coordinate.latitude)!, longitude: (locationManager!.location?.coordinate.longitude)!)
+            let span = mapView.region.span
+            request.region = MKCoordinateRegion(center: region, span: span)
+            
+            let search = MKLocalSearch(request: request)
+            search.start { response, error in
+                guard let response = response else {
+                    print("There was an error searching for: \(String(describing: request.naturalLanguageQuery)) error: \(String(describing: error))")
+                    return
+                }
+                print("There are \(response.mapItems.count)")
+                for item in response.mapItems {
+                    let pin = MKPointAnnotation()
+                    pin.title = item.placemark.name!
+                    if let addressLines = item.placemark.addressDictionary?["FormattedAddressLines"] as? [String] {
+                        pin.subtitle =  addressLines.joined(separator: ", ")
+                    }
+                    pin.coordinate = CLLocationCoordinate2D(latitude: (item.placemark.location?.coordinate.latitude)!, longitude: (item.placemark.location?.coordinate.longitude)!)
+                    self.mapView.addAnnotation(pin)
+                }
+                
+                self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+            }
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView)
+    {
+        if let annotationTitle = view.annotation?.title {
+            self.currentLocation = CurrentLocation(name: annotationTitle, latitude: "", longitude: "")
+            self.location.text = annotationTitle
+        }
+        
+        if let annotationLatitude = view.annotation?.coordinate.latitude,
+           let annotationLongitude = view.annotation?.coordinate.longitude {
+            self.currentLocation.latitude = String(annotationLatitude)
+            self.currentLocation.longitude = String(annotationLongitude)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let currentLocation = locations.last as CLLocation? {
+            print("Latitude: \(currentLocation.coordinate.latitude)")
+            print("Longitude: \(currentLocation.coordinate.longitude)")
+            
+            // Zoom to user location
+            let userRegion = MKCoordinateRegionMakeWithDistance(currentLocation.coordinate, 1000, 1000)
+            mapView.setRegion(userRegion, animated: true)
+            mapView.showsUserLocation = true
+            
+            search()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        if let error = error as? CLError, error.code == .denied {
+            // Location updates are not authorized.
+            print(error)
+            return
+        }
+        // Notify the user of any errors.
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -300,9 +424,28 @@ class EntryDataLogTableViewController: UITableViewController, UIPickerViewDelega
             tableView.beginUpdates()
             tableView.endUpdates()
         }
-        print(newSize.height)
+    }
+    
+    
+    @IBAction func locationTextChanged(_ sender: Any) {
+        if let textfield = sender as? UITextField {
+            if (CLLocationManager.authorizationStatus() == .authorizedWhenInUse) {
+                
+                locationSearchTimer?.invalidate()
+                
+                self.currentLocation.latitude = ""
+                self.currentLocation.longitude = ""
+                
+                if let newLocation = textfield.text {
+                    self.currentLocation.name = newLocation
+                    locationSearchTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(search), userInfo: nil, repeats: false)
+                }
+            }
+        }
     }
 }
+
+
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

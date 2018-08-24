@@ -11,6 +11,16 @@ import GoogleSignIn
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
+    override func viewWillAppear(_ animated: Bool) {
+        let loadingViewController = LoadingViewController.init(nibName:"LoadingViewController", bundle: nil)
+        loadingViewController.modalPresentationStyle = .overCurrentContext
+        navigationController!.present(loadingViewController, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+       dismiss(animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
